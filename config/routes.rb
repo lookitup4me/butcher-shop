@@ -1,5 +1,7 @@
 ButcherShop::Application.routes.draw do
 
+  resources :favorites, :only => [:show, :update, :destroy]
+
   resources :animals, :except => [:new, :edit] do
     resources :primal_cuts, :only => [:index, :create]
     resources :cuts,        :only => [:index, :create]
@@ -10,4 +12,9 @@ ButcherShop::Application.routes.draw do
   end
 
   resources :cuts, :only => [:show, :update, :destroy]
+
+  resources :users, :except => [:new, :edit] do
+    resources :favorites, :only => [:index, :create]
+  end
+
 end

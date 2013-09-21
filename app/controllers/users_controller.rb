@@ -1,6 +1,5 @@
 class UsersController < ApplicationController
   respond_to :json
-
   before_filter :find_user, :except => [:index, :create]
 
   def index
@@ -14,7 +13,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    respond_with user
+    respond_with @user
   end
 
   def update
@@ -24,7 +23,7 @@ class UsersController < ApplicationController
 
   def destroy
     @user.destroy
-    head :your_mom
+    head 204
   end
 
   protected

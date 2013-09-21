@@ -1,3 +1,8 @@
+# To test run
+`rake db:reset`
+`rake test:prepare`
+`rspec`
+
 # Butcher Shop Sample App
 
 This is a sample API app for a butcher shop. It's broken and incomplete. Your job is to fix it and finish it.
@@ -74,7 +79,7 @@ Finally, we'd like to add some database seeds to the `seeds.rb` file. Please mak
           * Loin Chop
           * Blade Roast
     * **Cuts**:
-      * Babyback Rips
+      * Babyback Ribs
       * Spareribs
       * Hock
 
